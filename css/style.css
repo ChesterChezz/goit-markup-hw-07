@@ -1404,6 +1404,7 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
     }
 
     .subscribe-div {
+        margin-top: 0;
         margin-left: 80px;
     }
 
