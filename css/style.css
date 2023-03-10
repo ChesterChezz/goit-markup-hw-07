@@ -40,24 +40,23 @@ img {
 /*=============Mobile Menu===================*/
 
 .mobile-menu-close-btn {
+    background: var(--cornflower-color);
     width: 24px;
     height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    border: 1px solid var(--cornflower-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
+    padding: 8px;
+    cursor: pointer;
     position: absolute;
-    top: 40px;
     right: 40px;
+    top: 40px;
+    transition: background-color var(--animation-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.mobile-menu-close-btn svg {
-    display: block;
-    width: 8px;
-    height: 8px;
-}
+
 
 /*=============CONTAINER===================*/
 
@@ -91,6 +90,7 @@ img {
 
     .container {
         width: 100%;
+        max-width: 428px;
     }
 
     .address_style {
@@ -271,6 +271,7 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
 
     .benefits_list li {
         flex-basis: calc((100% - 1 * 24px) / 2);
+
     }
 
     .benefits_list li p {
@@ -279,11 +280,7 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
         margin-top: 8px;
     }
 
-    .header3_style {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.11;
-    }
+
 
     .our_team_style {
         flex-wrap: wrap;
@@ -379,6 +376,7 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
     background: transparent;
     border: none;
     display: flex;
+    padding: 0;
 }
 
 .burger-svg {
@@ -395,6 +393,8 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
 }
 
 .header-child {
@@ -534,8 +534,8 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
 
 /*=============Benefits===============*/
 .benefits-section {
-    margin-top: 96px;
-    margin-bottom: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
     min-width: 320px;
 }
 
@@ -548,13 +548,21 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
 
 }
 
-
-@media screen and (max-width:767px) {
+@media screen and (max-width:1199px) {
     .header3_style.mobile-h3 {
-        text-align: center;
+
         margin-bottom: 8px;
         font-weight: 700;
         font-size: 36px;
+
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    .header3_style.mobile-h3 {
+
+        text-align: center;
     }
 
     .benefits_list li {
@@ -562,8 +570,8 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
 
     }
 
-    .benefits_list li p{
-        color:var(--slate-color);
+    .benefits_list li p {
+        color: var(--slate-color);
         font-weight: 500;
         line-height: 1.5;
 
@@ -759,6 +767,11 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
     justify-content: center;
 }
 
+@media screen and (max-width:767px) {
+    .customers-list li a {
+        flex-basis: calc((100% - 1 * 24px) / 2);
+    }
+}
 
 .customers-list a {
     transition: border var(--animation-default);
@@ -906,6 +919,7 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
     border-radius: 4px;
     height: 40px;
     width: 100%;
+    max-width: 396px;
     background-color: transparent;
     padding: 8px 16px;
     font-size: 14px;
@@ -1167,6 +1181,9 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
     }
 }
 
+
+
+
 .modal-close-btn {
     background: var(--cornflower-color);
     width: 24px;
@@ -1185,7 +1202,7 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
 
 }
 
-.modal-close-btn svg {
+.close-btn-svg {
     fill: black;
 }
 
@@ -1385,7 +1402,23 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
 
 }
 
+@media screen and (max-width:400px) {
+    .main-modal {
+        width: 90%;
+
+    }
+
+    .callback-btn {
+        padding: 5px 0;
+
+        width: 50%;
+    }
+}
+
 @media screen and (min-width: 1200px) {
+    .benefits-section {
+        margin: 0;
+    }
 
     .footer-flex {
         padding: 0;
@@ -1395,11 +1428,18 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
         margin-right: 120px;
     }
 
+    .subscribe-input {
+        margin-bottom: 0;
+    }
 
 
     .footer-social p {
         font-weight: 500;
         margin-bottom: 16px;
+    }
+
+    .footer-social ul {
+        margin-bottom: 0;
     }
 
     .subscribe-div {
